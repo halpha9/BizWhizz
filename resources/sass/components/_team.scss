@@ -1,0 +1,103 @@
+.team-mates{
+	display:flex;
+	justify-content:space-around;
+	margin-top:2rem;
+	flex-wrap:wrap;
+}
+
+.team-mate{
+
+	border-radius:2rem;
+	border: 3px solid var(--color-primary);
+	width:24rem;
+	height:24rem;
+
+
+
+	&--1{
+		background-image:url(img/team-mate-1.jpg);
+		background-size:cover;
+		background-position:center;
+		position:relative;
+	}
+
+	&--2{
+		background-image:url(img/team-mate-2.jpg);
+		background-size:cover;
+		background-position:center;
+		position:relative;
+	}
+
+	&--3{
+		background-image:url(img/team-mate-3.jpg);
+		background-size:cover;
+		background-position:center;
+		position:relative;
+	}
+
+
+	&__overlay {
+		position:absolute;
+		top:0;
+		left:0;
+		width:23.7rem;
+		height:23.7rem;
+		border-radius:2rem;
+		background-color:rgba($color-primary, 0.3);
+		opacity:0;
+		transition:opacity 0.4s;
+	}
+
+	&:hover &__overlay{
+		opacity:1;
+	}
+
+	&__content{
+		color:var(--color-white);
+		position:absolute;
+		top:30%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		opacity:0;
+		transition: all 0.5s 0.2s;
+	}
+
+	&:hover &__content{
+		opacity:1;
+		top:50%;
+	}
+	
+	&__name {
+		font-size:2.7rem;
+		font-weight:800;
+		
+	}
+
+	&__designation{
+		font-size:1.75rem;
+		font-weight:400;
+	}
+}
+
+
+.social-media{
+	display:flex;
+	margin-top:2rem;
+	jusitify-content:center;
+}
+
+.facebook, .twitter, .linkedin{
+
+	&__icon{
+		height:3rem;
+		width:3rem;
+		margin:0.5rem;
+		fill:var(--color-white);
+		transition:transform 0.4s;
+
+		&:hover{
+		fill:var(--color-primary-light);
+		transform:scale(1.17);
+		}
+	}
+}
